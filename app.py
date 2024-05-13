@@ -64,5 +64,4 @@ rag_chain = (
 )
 
 for chunk in rag_chain.stream("How to o/iobe a good parent?"):
-    print(chunk, end="", flush=True)io
-
+    print(chunk, end="", flush=True)
