@@ -65,4 +65,27 @@ rag_chain = (
 
 for chunk in rag_chain.stream("How to be a good parent?"):
     print(chunk, end="", flush=True)
+    
+# @app.websocket("/ws")
+# async def websocket_endpoint(websocket: WebSocket):
+#     await websocket.accept()
+#     while True:
+#         # Wait for a message from the client
+#         #data = await websocket.receive_text()
+#         data = await websocket.receive_json()
+#         data = data["question"]
+        
+#         # Perform calculations based on the received data
+#         result = generate_answer(data)
+        
+#         # Send the result back to the client
+#         #await websocket.send_text(result)
+#         response = {"question":data,"answer":result}
+#         print("kdflhgkjfdg")
+#         await websocket.send_json(response)
+
+
+# def generate_answer(data:str) -> str:
+#     question = data
+#     return f"{question.upper()}"
 
