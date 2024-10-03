@@ -241,6 +241,9 @@
 
         let currentActiveConversation = null;
         async function fetchConversations() {
+            headers = {
+                'Authorization': localStorage.getItem('auth')
+            }
             const response = await fetch('http://127.0.0.1:5000/convo/user/66a7275b68d67303180c631a');
             const conversations = await response.json();
             const conversationList = document.getElementById('conversation-list');
